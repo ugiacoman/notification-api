@@ -1,7 +1,7 @@
 const { parse } = require('url')
 const fetch = require('isomorphic-fetch')
 
-  // {host}/?channel=@uli&username=Ulibot&text=Someone%20%visited%20your%website&emoji=:partyparrot
+  // {host}/?channel=@uli&username=Uli%20bot&text=Someone%20visited%20your%20website&emoji=partyparrot
 
 module.exports = async request => {
   const { query } = parse(request.url, true)
@@ -9,7 +9,7 @@ module.exports = async request => {
   var payload = { 'channel': query.channel,
                     'username': query.username,
                     'text': query.text,
-                    'icon_emoji': query.emoji
+                    'icon_emoji': ':' + query.emoji + ':'
                   }
   var formBody = ['payload=' + JSON.stringify(payload)]
 
