@@ -1,8 +1,6 @@
 const { parse } = require('url')
 const fetch = require('isomorphic-fetch')
 
-  // {host}/?channel=@uli&username=Uli%20bot&text=Someone%20visited%20your%20website&emoji=partyparrot
-
 module.exports = async request => {
   const { query } = parse(request.url, true)
 
