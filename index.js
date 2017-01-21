@@ -2,10 +2,10 @@ const { parse } = require('url')
 const fetch = require('isomorphic-fetch')
 
   // http://localhost:3000/?channel=@uli&username=Ulibot&text=hello&emoji=:partyparrot
-  
+
 module.exports = async request => {
   const { query } = parse(request.url, true)
-  console.log('query', query)
+
   var payload = { 'channel': query.channel,
                     'username': query.username,
                     'text': query.text,
@@ -23,10 +23,6 @@ module.exports = async request => {
                                 body: formBody
                                 })
                               .then(function(response) {
-                                response.status     //=> number 100–599
-                                response.statusText //=> String
-                                response.headers    //=> Headers
-                                response.url        //=> String
                                 return response.text()
                               }, function(error) {
                                 return error.message
