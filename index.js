@@ -1,7 +1,7 @@
 const { parse } = require('url')
 const fetch = require('isomorphic-fetch')
 
-  // http://localhost:3000/?channel=@uli&username=Ulibot&text=hello&emoji=:partyparrot
+  // {host}/?channel=@uli&username=Ulibot&text=Someone%20%visited%20your%website&emoji=:partyparrot
 
 module.exports = async request => {
   const { query } = parse(request.url, true)
@@ -25,7 +25,7 @@ module.exports = async request => {
                               .then(function(response) {
                                 return response.text()
                               }, function(error) {
-                                return error.message
+                                return 'Missing query params'
                               })
   return response
 };
