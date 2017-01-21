@@ -1,0 +1,19 @@
+{
+  "name": "personal-notifiction-api",
+  "version": "1.0.0",
+  "description": "Creates endpoint to ping my slack",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:ugiacoman/personal-notifiction-api.git",
+    "type": "git"
+  },
+  "scripts": {
+    "start": "micro"
+  },
+  "author": "uli",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "micro": "^6.2.0"
+  }
+}
