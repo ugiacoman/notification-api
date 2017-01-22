@@ -1,5 +1,5 @@
 # Notifiction-API
-Micro API to ping Slack
+Micro API to ping Slack. Why create a wrapper around another API? To secure your Slack :)
 
 ### Usage
 1. Install Yarn: `$ brew install yarn`
