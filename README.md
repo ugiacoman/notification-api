@@ -1,4 +1,4 @@
-# Notifiction-API
+# Notification-API
 Micro API to ping Slack. Why create a wrapper around another API? To secure your Slack for frontend use :) Also ProcFile included for deployment to Heroku.
 
 ### Usage
