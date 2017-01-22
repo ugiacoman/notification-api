@@ -9,7 +9,7 @@ module.exports = async request => {
                     'text': query.text,
                     'icon_emoji': ':' + query.emoji + ':'
                   }
-  var formBody = ['payload=' + JSON.stringify(payload)]
+  const formBody = ['payload=' + JSON.stringify(payload)]
 
   const slackURL = 'https://hooks.slack.com/services/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'
   const response = await fetch(slackURL, {
