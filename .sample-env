@@ -1,0 +1,6 @@
+# Be sure to rename file to `.env` when configured.
+# To send to channel use hashtag ie. #general
+# To send to user use at sign ie. @bobbyTarantino
+
+SLACK_URL=https://hooks.slack.com/services/{your integration}
+CHANNEL=@bobbyTarantino

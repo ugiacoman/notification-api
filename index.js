@@ -1,18 +1,18 @@
 const { parse } = require('url')
 const fetch = require('isomorphic-fetch')
+require('dotenv').config()
 
 module.exports = async request => {
   const { query } = parse(request.url, true)
 
-  var payload = { 'channel': query.channel,
+  var payload = { 'channel': process.env.CHANNEL,
                     'username': query.username,
                     'text': query.text,
                     'icon_emoji': ':' + query.emoji + ':'
                   }
   const formBody = ['payload=' + JSON.stringify(payload)]
 
-  const slackURL = 'https://hooks.slack.com/services/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'
-  const response = await fetch(slackURL, {
+  const response = await fetch(process.env.SLACK_URL, {
                                 method: "POST",
                                 headers: {
                                   "cache-control": "no-cache",
@@ -23,7 +23,7 @@ module.exports = async request => {
                               .then(function(response) {
                                 return response.text()
                               }, function(error) {
-                                return 'Missing query params'
+                                return 'Couldn\'t reach slack, check if you configured your .env file correctly.'
                               })
   return response
 };
