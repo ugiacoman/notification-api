@@ -15,6 +15,7 @@
   "dependencies": {
     "dotenv": "^4.0.0",
     "isomorphic-fetch": "^2.2.1",
-    "micro": "^6.2.0"
+    "micro": "^6.2.0",
+    "micro-cors": "^0.0.1"
   }
 }

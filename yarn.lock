@@ -69,6 +69,10 @@ micro:
     minimist "1.2.0"
     raw-body "2.2.0"
 
+micro-cors:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/micro-cors/-/micro-cors-0.0.1.tgz#f3e1f85936e33bf15d321ba57938a6407e1976fa"
+
 minimist@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"

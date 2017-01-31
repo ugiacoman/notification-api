@@ -1,8 +1,10 @@
 const { parse } = require('url')
 const fetch = require('isomorphic-fetch')
+const microCors = require('micro-cors')
+
 require('dotenv').config()
 
-module.exports = async request => {
+const pingSlack = async (request, response)  => {
   const { query } = parse(request.url, true)
 
   var payload = { 'channel': process.env.CHANNEL,
@@ -21,11 +23,12 @@ module.exports = async request => {
                                 body: formBody
                                 })
                               .then(function(response) {
-                                return response.text()
+                                return(response.text())
                               }, function(error) {
-                                return 'Couldn\'t reach slack, check if you configured your .env file correctly.'
+                                return('Couldn\'t reach slack, check if you configured your .env file correctly.')
                               })
-                              
-  response.setHeader('Access-Control-Allow-Origin', '*')
-  return response
-};
+return response
+}
+
+const cors = microCors({ allowMethods: ['GET', 'POST']})
+module.exports = cors(pingSlack)
