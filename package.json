@@ -8,7 +8,7 @@
     "type": "git"
   },
   "scripts": {
-    "start": "micro -p $PORT"
+    "start": "micro"
   },
   "author": "uli",
   "license": "MIT",

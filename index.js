@@ -25,5 +25,7 @@ module.exports = async request => {
                               }, function(error) {
                                 return 'Couldn\'t reach slack, check if you configured your .env file correctly.'
                               })
+                              
+  response.setHeader('Access-Control-Allow-Origin', '*')
   return response
 };
