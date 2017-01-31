@@ -14,7 +14,7 @@ Micro API to ping Slack. Why create a wrapper around another API? To secure your
  * `emoji`: The avatar for your post
 
 #### Example
- * `localhost:3000/&username=Uli%20bot&text=hi%20people&emoji=partyparrot`
+ * `localhost:3000/?username=Uli%20bot&text=hi%20people&emoji=partyparrot`
 
 #### Heroku Deployment (requires git)
 1. Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
