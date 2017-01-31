@@ -30,5 +30,5 @@ const pingSlack = async (request, response)  => {
 return response
 }
 
-const cors = microCors({ allowMethods: ['GET', 'POST']})
+const cors = microCors({ allowMethods: ['GET']})
 module.exports = cors(pingSlack)
