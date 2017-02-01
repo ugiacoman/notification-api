@@ -18,4 +18,3 @@ node_modules
 .node_repl_history
 
 .sample-env
-.env
