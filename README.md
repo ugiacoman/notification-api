@@ -1,5 +1,5 @@
 # Notification-API
-Micro API to ping Slack. Why create a wrapper around another API? To secure your Slack for frontend use :) Also ProcFile included for deployment to Heroku.
+Micro API to ping Slack. Why create a wrapper around another API? To secure your Slack for frontend use :) Also ProcFile included for deployment to Heroku. More info: http://udiscover.me/notify-yourself/
 
 ### Usage
 1. Install Yarn: `$ brew install yarn`
